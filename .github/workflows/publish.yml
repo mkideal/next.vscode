@@ -22,7 +22,9 @@ jobs:
         run: npm install -g @vscode/vsce
 
       - name: Authenticate with VSCode Marketplace
-        run: vsce login ${{ secrets.VSCE_PUBLISHER }}
+        run: |
+          echo "Attempting to log in as ${{ secrets.VSCE_PUBLISHER }}"
+          vsce login ${{ secrets.VSCE_PUBLISHER }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
 
