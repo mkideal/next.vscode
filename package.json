@@ -15,7 +15,9 @@
 	  "Programming Languages"
 	],
 	"activationEvents": [
-	  "onLanguage:npl"
+	  "onLanguage:npl",
+	  "onLanguage:tmpl",
+	  "onLanguage:gotmpl"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -40,7 +42,29 @@
 		  "extensions": [
 			".npl"
 		  ],
-		  "configuration": "./npl-language-configuration.json"
+		  "configuration": "./tmpl-language-configuration.json"
+		},
+		{
+		  "id": "tmpl",
+		  "aliases": [
+			"TMPL",
+			"tmpl"
+		  ],
+		  "extensions": [
+			".tmpl"
+		  ],
+		  "configuration": "./tmpl-language-configuration.json"
+		},
+		{
+		  "id": "gotmpl",
+		  "aliases": [
+			"TMPL",
+			"tmpl"
+		  ],
+		  "extensions": [
+			".gotmpl"
+		  ],
+		  "configuration": "./tmpl-language-configuration.json"
 		}
 	  ],
 	  "grammars": [

@@ -15,8 +15,6 @@ export function activate(context: ExtensionContext) {
     outputChannel.appendLine("NPL Language Server is now active!");
     outputChannel.show();
 
-    outputChannel.appendLine("Activating NPL Language Server...");
-
     // 创建一个自定义的服务器选项
     const serverOptions: ServerOptions = function () {
       return new Promise((resolve, reject) => {
@@ -38,7 +36,11 @@ export function activate(context: ExtensionContext) {
 
     // 控制语言客户端的选项
     const clientOptions: LanguageClientOptions = {
-      documentSelector: [{ scheme: "file", language: "npl" }],
+      documentSelector: [
+        { scheme: "file", language: "npl" },
+        { scheme: "file", language: "tmpl" },
+        { scheme: "file", language: "gotmpl" },
+      ],
       synchronize: {
         fileEvents: workspace.createFileSystemWatcher("**/.clientrc"),
       },
@@ -72,10 +74,6 @@ export function activate(context: ExtensionContext) {
       "Language client started, waiting for ready event..."
     );
     outputChannel.show();
-
-    client.onNotification("initialized", () => {
-      outputChannel.appendLine("Server sent initialized notification");
-    });
 
     client
       .onReady()
