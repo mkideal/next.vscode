@@ -37,6 +37,7 @@ export function activate(context: ExtensionContext) {
     // 控制语言客户端的选项
     const clientOptions: LanguageClientOptions = {
       documentSelector: [
+        { scheme: "file", language: "next" },
         { scheme: "file", language: "npl" },
         { scheme: "file", language: "tmpl" },
         { scheme: "file", language: "gotmpl" },
