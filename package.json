@@ -4,6 +4,7 @@
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
 	"version": "0.0.3",
 	"publisher": "nextlangorg",
+	"icon": "res/icon256.png",
 	"repository": {
 	  "type": "git",
 	  "url": "https://github.com/gopherd/next.vscode.git"
