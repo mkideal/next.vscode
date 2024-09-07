@@ -12,15 +12,9 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install vsce
         run: npm install -g @vscode/vsce
-      - name: Authenticate with VSCode Marketplace
-        run: |
-          echo "Attempting to log in as ${{ secrets.VSCE_PUBLISHER }}"
-          vsce login ${{ secrets.VSCE_PUBLISHER }}
-        env:
-          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
       - name: Publish extension
         run: vsce publish
         env:
