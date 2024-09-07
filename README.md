@@ -1,46 +1,64 @@
-# Next Language Support for Visual Studio Code
+# next-lang
 
-This extension provides language support for the Next programming language in Visual Studio Code.
+A Visual Studio Code extension for the Next language, its related template files, and Go templates. This extension enhances your development experience with Next language files (`.next`), Next template files (`.npl`), and Go template files (`.tmpl` and `.gotmpl`).
+
+## Screenshot
+
+**demo.tmpl**
+
+![Screenshot](./res/tmpl-screenshot.png)
+
+---
+
+**demo.next**
+
+![Screenshot](./res/next-screenshot.png)
 
 ## Features
 
-- Syntax highlighting for Next language files (`.next`)
-- Basic language configuration (comments, brackets, auto-closing pairs)
+This extension provides enhanced support for Next language files (`.next`) and its associated template files (`.npl`). It also includes support for Go template files (`.tmpl` and `.gotmpl`).
+
+Current features:
+- Semantic highlighting for Next language files (`.next`)
+- Syntax highlighting for Next template files (`.npl`)
+- Syntax highlighting for Go template files (`.tmpl` and `.gotmpl`)
+
+Upcoming features:
+- Diagnostics
+- Auto-completion
+- Go to definition
+- Hover information
+- Code folding
+- Formatting
 
 ## Installation
 
 1. Open Visual Studio Code
-2. Press `Ctrl+P` (or `Cmd+P` on macOS) to open the Quick Open dialog
-3. Type `ext install next-language` and press Enter
-4. Click the Install button
+2. Go to the Extensions view (Ctrl+Shift+X)
+3. Search for `next lang`
+4. Click Install
 
 ## Usage
 
-Once installed, the extension will automatically activate for any `.next` files you open in VS Code.
+Once installed, the extension will automatically activate for files with the following extensions:
+- `.next` (Next language files)
+- `.npl` (Next template files)
+- `.tmpl` and `.gotmpl` (Go template files)
 
-## Syntax Highlighting
-
-The extension provides syntax highlighting for:
-
-- Keywords (package, import, const, enum, struct, iota)
-- Built-in types (bool, int, int8, int16, int32, int64, float32, float64, string, byte, bytes)
-- Composite types (array, vector, map)
-- Constants and variables
-- Strings and numbers
-- Comments (line and block)
-- Annotations
-- Operators
+The extension will provide syntax highlighting out of the box. As more features are implemented, they will become available automatically.
 
 ## Contributing
 
-If you'd like to contribute to this extension, please feel free to submit a pull request or open an issue on our GitHub repository.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This extension is released under the MIT License.
+[MIT License](LICENSE)
 
 ## Contact
 
-If you have any questions, issues, or suggestions, please open an issue on our GitHub repository.
+If you have any questions, issues, or suggestions, please open an issue in the GitHub repository.
 
-Enjoy using Next in Visual Studio Code!
+---
+
+Happy coding with Next language and Go templates!
