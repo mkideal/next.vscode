@@ -16,6 +16,7 @@
 	  "Programming Languages"
 	],
 	"activationEvents": [
+	  "onLanguage:next",
 	  "onLanguage:npl",
 	  "onLanguage:tmpl",
 	  "onLanguage:gotmpl"

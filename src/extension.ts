@@ -59,8 +59,8 @@ export function activate(context: ExtensionContext) {
 
     // 创建并启动语言客户端
     client = new LanguageClient(
-      "nplLanguageServer",
-      "NPL Language Server",
+      "nextLanguageServer",
+      "Next Language Server",
       serverOptions,
       clientOptions
     );
