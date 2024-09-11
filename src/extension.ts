@@ -8,6 +8,7 @@ import {
 
 let client: LanguageClient;
 let outputChannel: OutputChannel;
+let nextlsProcess: child_process.ChildProcess | null = null;
 
 export function activate(context: ExtensionContext) {
   try {
@@ -15,26 +16,23 @@ export function activate(context: ExtensionContext) {
     outputChannel.appendLine("NPL Language Server is now active!");
     outputChannel.show();
 
-    // 创建一个自定义的服务器选项
     const serverOptions: ServerOptions = function () {
       return new Promise((resolve, reject) => {
-        // 尝试启动 nextls
-        const childProcess = child_process.spawn("nextls");
-
-        childProcess.on("error", (err) => {
+        nextlsProcess = child_process.spawn("nextls");
+        nextlsProcess.on("error", (err) => {
           window.showErrorMessage(`Failed to start nextls: ${err.message}`);
           reject(err);
         });
+        if (nextlsProcess.stderr) {
+          nextlsProcess.stderr.on("data", (data) => {
+            console.error(`nextls stderr: ${data}`);
+          });
+        }
 
-        childProcess.stderr.on("data", (data) => {
-          console.error(`nextls stderr: ${data}`);
-        });
-
-        resolve(childProcess);
+        resolve(nextlsProcess);
       });
     };
 
-    // 控制语言客户端的选项
     const clientOptions: LanguageClientOptions = {
       documentSelector: [
         { scheme: "file", language: "next" },
@@ -57,7 +55,6 @@ export function activate(context: ExtensionContext) {
 
     outputChannel.appendLine("Creating language client...");
 
-    // 创建并启动语言客户端
     client = new LanguageClient(
       "nextLanguageServer",
       "Next Language Server",
@@ -68,7 +65,6 @@ export function activate(context: ExtensionContext) {
     outputChannel.appendLine("Starting language client...");
     outputChannel.show();
 
-    // 启动客户端。这也会启动服务器
     var disposable = client.start();
 
     outputChannel.appendLine(
@@ -84,7 +80,6 @@ export function activate(context: ExtensionContext) {
         outputChannel.appendLine(
           JSON.stringify(client.initializeResult?.capabilities, null, 2)
         );
-        // 添加更多的事件监听器
         outputChannel.appendLine("Adding event listeners...");
 
         client.onDidChangeState((e) => {
@@ -114,5 +109,10 @@ export function deactivate(): Thenable<void> | undefined {
   if (!client) {
     return undefined;
   }
-  return client.stop();
+  return client.stop().then(() => {
+    if (nextlsProcess) {
+      nextlsProcess.kill();
+      nextlsProcess = null;
+    }
+  });
 }

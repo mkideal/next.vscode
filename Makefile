@@ -1,9 +1,11 @@
-.PHONY: clean package release
+.PHONY: release package publish clean
+
+release: package publish clean
 
 package:
 	vsce package
 
-release: package
+publish:
 	vsce publish
 
 clean:
