@@ -2,85 +2,85 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"publisher": "nextlangorg",
 	"icon": "res/icon.png",
 	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/gopherd/next.vscode.git"
+		"type": "git",
+		"url": "https://github.com/gopherd/next.vscode.git"
 	},
 	"engines": {
-	  "vscode": "^1.60.0"
+		"vscode": "^1.60.0"
 	},
 	"categories": [
-	  "Programming Languages"
+		"Programming Languages"
 	],
 	"activationEvents": [
-	  "onLanguage:next",
-	  "onLanguage:npl",
-	  "onLanguage:tmpl",
-	  "onLanguage:gotmpl"
+		"onLanguage:next",
+		"onLanguage:npl",
+		"onLanguage:tmpl",
+		"onLanguage:gotmpl"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-	  "languages": [
-		{
-		  "id": "next",
-		  "aliases": [
-			"Next",
-			"next"
-		  ],
-		  "extensions": [
-			".next"
-		  ],
-		  "configuration": "./next-language-configuration.json"
-		},
-		{
-		  "id": "npl",
-		  "aliases": [
-			"NPL",
-			"npl"
-		  ],
-		  "extensions": [
-			".npl"
-		  ],
-		  "configuration": "./tmpl-language-configuration.json"
-		},
-		{
-		  "id": "tmpl",
-		  "aliases": [
-			"TMPL",
-			"tmpl"
-		  ],
-		  "extensions": [
-			".tmpl"
-		  ],
-		  "configuration": "./tmpl-language-configuration.json"
-		},
-		{
-		  "id": "gotmpl",
-		  "aliases": [
-			"TMPL",
-			"tmpl"
-		  ],
-		  "extensions": [
-			".gotmpl"
-		  ],
-		  "configuration": "./tmpl-language-configuration.json"
-		}
-	  ]
+		"languages": [
+			{
+				"id": "next",
+				"aliases": [
+					"Next",
+					"next"
+				],
+				"extensions": [
+					".next"
+				],
+				"configuration": "./next-language-configuration.json"
+			},
+			{
+				"id": "npl",
+				"aliases": [
+					"NPL",
+					"npl"
+				],
+				"extensions": [
+					".npl"
+				],
+				"configuration": "./tmpl-language-configuration.json"
+			},
+			{
+				"id": "tmpl",
+				"aliases": [
+					"TMPL",
+					"tmpl"
+				],
+				"extensions": [
+					".tmpl"
+				],
+				"configuration": "./tmpl-language-configuration.json"
+			},
+			{
+				"id": "gotmpl",
+				"aliases": [
+					"TMPL",
+					"tmpl"
+				],
+				"extensions": [
+					".gotmpl"
+				],
+				"configuration": "./tmpl-language-configuration.json"
+			}
+		]
 	},
 	"scripts": {
-	  "vscode:prepublish": "npm run compile",
-	  "compile": "tsc -p ./",
-	  "watch": "tsc -watch -p ./"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
-	  "@types/vscode": "^1.60.0",
-	  "@types/node": "^14.14.31",
-	  "typescript": "^4.3.5"
+		"@types/vscode": "^1.60.0",
+		"@types/node": "^14.14.31",
+		"typescript": "^4.3.5"
 	},
 	"dependencies": {
-	  "vscode-languageclient": "^7.0.0"
+		"vscode-languageclient": "^7.0.0"
 	}
-  }
+}
