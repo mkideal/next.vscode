@@ -2,7 +2,7 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"publisher": "nextlangorg",
 	"icon": "res/icon.png",
 	"repository": {
@@ -23,6 +23,13 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"iconThemes": [
+    		{
+    			"id": "custom-file-icons",
+    			"label": "Custom File Icons",
+    			"path": "./iconTheme.json"
+    		}
+    	],
 		"languages": [
 			{
 				"id": "next",
