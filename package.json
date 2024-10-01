@@ -30,6 +30,21 @@
     			"path": "./iconTheme.json"
     		}
     	],
+		"configuration": {
+			"title": "Next Lang",
+			"properties": {
+				"nextlang.useTabsInsteadOfSpaces": {
+					"type": "boolean",
+					"default": false,
+					"description": "Use tabs instead of spaces for indentation in Next Lang files"
+				},
+				"nextlang.tabSize": {
+					"type": "number",
+					"default": 4,
+					"description": "The number of spaces a tab is equal to in Next Lang files"
+				}
+			}
+		},
 		"languages": [
 			{
 				"id": "next",
