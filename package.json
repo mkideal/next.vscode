@@ -2,7 +2,7 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"publisher": "nextlangorg",
 	"icon": "res/icon.png",
 	"repository": {
@@ -26,47 +26,31 @@
 		"languages": [
 			{
 				"id": "next",
-				"aliases": [
-					"Next",
-					"next"
-				],
-				"extensions": [
-					".next"
-				],
+				"aliases": ["Next", "next"],
+				"extensions": [".next"],
 				"configuration": "./next-language-configuration.json"
 			},
 			{
 				"id": "npl",
-				"aliases": [
-					"NPL",
-					"npl"
-				],
-				"extensions": [
-					".npl"
-				],
+				"aliases": ["NPL", "npl"],
+				"extensions": [".npl"],
 				"configuration": "./tmpl-language-configuration.json"
 			},
 			{
 				"id": "tmpl",
-				"aliases": [
-					"TMPL",
-					"tmpl"
-				],
-				"extensions": [
-					".tmpl"
-				],
+				"aliases": ["TMPL", "tmpl"],
+				"extensions": [".tmpl"],
 				"configuration": "./tmpl-language-configuration.json"
 			},
 			{
 				"id": "gotmpl",
-				"aliases": [
-					"TMPL",
-					"tmpl"
-				],
-				"extensions": [
-					".gotmpl"
-				],
+				"aliases": ["TMPL", "tmpl"],
+				"extensions": [".gotmpl"],
 				"configuration": "./tmpl-language-configuration.json"
+			},
+			{
+				"id": "yaml",
+				"extensions": [".nextproj"]
 			}
 		]
 	},
