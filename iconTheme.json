@@ -1,10 +1,10 @@
 {
     "iconDefinitions": {
       "_npl_file": {
-        "iconPath": "./res/themes/npl-icon.png"
+        "iconPath": "./res/icons/npl-icon.svg"
       },
       "_next_file": {
-        "iconPath": "./res/themes/next-icon.png"
+        "iconPath": "./res/icons/next-icon.svg"
       }
     },
     "fileExtensions": {

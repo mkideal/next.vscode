@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="38px" viewBox="0 0 32 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>next-icon</title>
+    <defs>
+        <pattern id="pattern-1" width="100%" height="100%" patternUnits="objectBoundingBox">
+            <use xlink:href="#image-2"></use>
+        </pattern>
+        <image id="image-2" width="20" height="38" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAmCAYAAADEO7urAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAJgAAAABpPBsbAAACmklEQVRIDZWVQXLbMAxFJdnd9QBd58Y5aHfddDqx+h+ID4GyUqeckQECHw8gpUzWH+/7vi5aOz9asn2/9nj3U3uu2Ua1wkFpNpRf+3Ep6o0fN8av1VUVvHBcnDaA/zvddCW9h6B1ZDciPy61Kz/xXZSWRmNC9D6irRnnvSHOp/XL2yKfRVeTXda3iaYXoHgcuUPdOODn6ZzEtk6ejvD8UtAB+QfIqbBADZYFfLyUL4KEmJbBbjTfIVJlPKWbF4FATtJt5DM33yGwqpbjtj124ccd0ki5O9PgAOr1sXcQ6zy+noJ4j0D+mDBJdVSTbVOMIfQESyjAO/4qFdaLooAT0IZ8rFb4BEUAkIKAUSgnfOVWPqgHzojBJN8fxAYrPYC+w9wHIKgmU+QkvprwdFjkU3Pn095dTAZflhhbBt2BaL99yPKQQ8fjRUx+vOUxgnYIiObaW7Pbr2W5/VGCQoNsXSAbd8g+cgmbfEF/f1+Wn2/L8nGXjpFZrfEIjN8xoSMSGeZP6HET6FtOJ90DoB7rAIefjAPo6bCIeCgEQIx71P2xjTtvOlxPfBw5BeQKplhAZSPN28WBerGYdJrQxwxgFkaMYqkJxfkAM70ML8ga8tOHTYWh5UtUCwKPVnyLho5QpLYnQELddYyVFRgB+2dTUxNXetyGJxt6ymIVtAKjaCQTnCB/6OPI0eY4bk1tUFpk/qsKX3tbHKDjyBSQ4TktaS7jXebpiB1HToWns71qEn05Kt2i4+E//QtI7rUxICGIDI8CxS//SV3T5mjdjuGyxOrfaD/a09uF5cLOzVjBA5iCyPVM9xukwr2Bfdl6Ka3mtZuAgNtPG8Dws3U/bmpeN2iK4w5bsNw6X0Vmxx3Tjg97lozdK1CrOUv/ApUZAy5xkkp0AAAAAElFTkSuQmCC"></image>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="FugazOne-Regular, Fugaz One" font-size="26" font-weight="normal">
+        <g id="画板" transform="translate(-334, -1019)" fill="url(#pattern-1)" fill-rule="nonzero">
+            <g id="next-icon" transform="translate(334, 1019)">
+                <text id="N">
+                    <tspan x="7" y="27">N</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
