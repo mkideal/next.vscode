@@ -2,7 +2,7 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"publisher": "nextlangorg",
 	"icon": "res/icons/icon.png",
 	"repository": {
@@ -23,26 +23,14 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"iconThemes": [
-    		{
-    			"id": "custom-file-icons",
-    			"label": "Custom File Icons",
-    			"path": "./iconTheme.json"
-    		}
-    	],
-		"configuration": {
-			"title": "Next Lang",
-			"properties": {
-				"nextlang.useTabsInsteadOfSpaces": {
-					"type": "boolean",
-					"default": false,
-					"description": "Use tabs instead of spaces for indentation in Next Lang files"
-				},
-				"nextlang.tabSize": {
-					"type": "number",
-					"default": 4,
-					"description": "The number of spaces a tab is equal to in Next Lang files"
-				}
+		"configurationDefaults": {
+			"[next]": {
+				"editor.insertSpaces": false,
+				"editor.tabSize": 4
+			},
+			"[npl]": {
+				"editor.insertSpaces": false,
+				"editor.tabSize": 4
 			}
 		},
 		"languages": [
@@ -56,18 +44,6 @@
 				"id": "npl",
 				"aliases": ["NPL", "npl"],
 				"extensions": [".npl"],
-				"configuration": "./tmpl-language-configuration.json"
-			},
-			{
-				"id": "tmpl",
-				"aliases": ["TMPL", "tmpl"],
-				"extensions": [".tmpl"],
-				"configuration": "./tmpl-language-configuration.json"
-			},
-			{
-				"id": "gotmpl",
-				"aliases": ["TMPL", "tmpl"],
-				"extensions": [".gotmpl"],
 				"configuration": "./tmpl-language-configuration.json"
 			},
 			{
