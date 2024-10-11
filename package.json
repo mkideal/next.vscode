@@ -2,12 +2,12 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.16",
+	"version": "0.0.17",
 	"publisher": "nextlangorg",
 	"icon": "res/icons/icon.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gopherd/next.vscode.git"
+		"url": "https://github.com/mkideal/next.vscode.git"
 	},
 	"engines": {
 		"vscode": "^1.60.0"
@@ -17,9 +17,7 @@
 	],
 	"activationEvents": [
 		"onLanguage:next",
-		"onLanguage:npl",
-		"onLanguage:tmpl",
-		"onLanguage:gotmpl"
+		"onLanguage:npl"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -31,6 +29,17 @@
 			"[npl]": {
 				"editor.insertSpaces": false,
 				"editor.tabSize": 4
+			}
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Next Lang Configuration",
+			"properties": {
+				"nextls.executablePath": {
+					"type": "string",
+					"default": "nextls",
+					"description": "Path to the Next Language Server executable"
+				},
 			}
 		},
 		"languages": [

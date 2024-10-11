@@ -16,9 +16,12 @@ export function activate(context: ExtensionContext) {
     outputChannel.appendLine("NPL Language Server is now active!");
     outputChannel.show();
 
+    const config = workspace.getConfiguration('nextls');
+    const executablePath = config.get<string>('executablePath', 'nextls');
+
     const serverOptions: ServerOptions = function () {
       return new Promise((resolve, reject) => {
-        nextlsProcess = child_process.spawn("nextls");
+        nextlsProcess = child_process.spawn(executablePath);
         nextlsProcess.on("error", (err) => {
           window.showErrorMessage(`Failed to start nextls: ${err.message}`);
           reject(err);
@@ -37,8 +40,6 @@ export function activate(context: ExtensionContext) {
       documentSelector: [
         { scheme: "file", language: "next" },
         { scheme: "file", language: "npl" },
-        { scheme: "file", language: "tmpl" },
-        { scheme: "file", language: "gotmpl" },
       ],
       synchronize: {
         fileEvents: workspace.createFileSystemWatcher("**/.clientrc"),
