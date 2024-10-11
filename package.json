@@ -2,7 +2,7 @@
 	"name": "nextlang",
 	"displayName": "Next Lang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"publisher": "nextlangorg",
 	"icon": "res/icons/icon.png",
 	"repository": {
@@ -39,7 +39,7 @@
 					"type": "string",
 					"default": "nextls",
 					"description": "Path to the Next Language Server executable"
-				},
+				}
 			}
 		},
 		"languages": [
