@@ -1,8 +1,8 @@
 {
 	"name": "nextlang",
-	"displayName": "Next Lang",
+	"displayName": "Nextlang",
 	"description": "Language support for Next and Next Template NPL (Based on Go Template)",
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"publisher": "nextlangorg",
 	"icon": "res/icons/icon.png",
 	"repository": {
@@ -33,7 +33,7 @@
 		},
 		"configuration": {
 			"type": "object",
-			"title": "Next Lang Configuration",
+			"title": "Nextlang",
 			"properties": {
 				"nextls.executablePath": {
 					"type": "string",
